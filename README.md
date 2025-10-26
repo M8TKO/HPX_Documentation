@@ -1,4 +1,3 @@
-```
 # HPX_Documentation
 
 This repository contains my experiments and notes from learning **HPX**, a modern C++ runtime system for parallel and distributed applications.  
@@ -19,21 +18,18 @@ By writing and analyzing small programs, I built an understanding of:
 ---
 
 ## Repository Structure
-
 ```
-
-HPX_Documentation/
-├── src/               # Example source files used for learning HPX
-│   ├── async_examples.cpp
-│   ├── futures_and_then.cpp
-│   ├── parallel_algorithms.cpp
-│   ├── three_vector_problem.cpp
-│   └── ...
-├── CMakeLists.txt     # HPX build configuration
-├── rebuild.sh         # Convenience script for clean rebuilds
-└── .gitignore
-
-````
+HPX_Documentation/  
+├── src/                  # Example source files used for learning HPX  
+│   ├── async_examples.cpp  
+│   ├── futures_and_then.cpp  
+│   ├── parallel_algorithms.cpp  
+│   ├── three_vector_problem.cpp  
+│
+├── CMakeLists.txt        # HPX build configuration  
+├── rebuild.sh            # Convenience script for clean rebuilds  
+└── .gitignore  
+```
 
 Each file in `src/` represents a self-contained experiment illustrating one HPX concept.  
 For example, the *three vector problem* demonstrates how tasks can be expressed asynchronously and synchronized via futures rather than blocking operations.
@@ -63,11 +59,12 @@ Through these examples, I gained practical understanding of HPX’s key abstract
 
 ### 5. Build System Integration
 - Setting up HPX via CMake with  
-  ```cmake
-  find_package(HPX REQUIRED)
-  add_executable(example src/example.cpp)
-  target_link_libraries(example HPX::hpx)
-````
+```
+cmake
+find_package(HPX REQUIRED)
+add_executable(example src/example.cpp)
+target_link_libraries(example HPX::hpx)
+```
 
 * Using `rebuild.sh` to clean and rebuild efficiently during iterative testing.
 
